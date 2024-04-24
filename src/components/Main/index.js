@@ -87,7 +87,7 @@ const Main = ({
           </div>
         </div>
       </div>
-      {isToday ? (
+      {!isToday ? (
         <div className="row-span-3 flex flex-wrap gap-4 px-1 justify-start w-full ">
           {weekData?.map((item, index) => {
             const hour = new Date(item?.dt * 1000).toLocaleTimeString([], {
@@ -167,7 +167,7 @@ const Main = ({
           </>
         </div>
       )}
-      <div className="row-span-7  flex flex-col  h-full pt-4 mt-6 gap-4">
+      <div className="row-span-3 flex flex-wrap gap-4 px-1 justify-start w-full">
         <div className="text-xl font-medium">Today's Highlights</div>
 
         <div className="grid grid-cols-3 grid-rows-2 gap-4 p-1 ">
@@ -183,7 +183,7 @@ const Main = ({
               </>
             ) : (
               <>
-                <div className="flex-1 min-w-20 max-w-30 bg-white h-32 flex flex-col justify-between  py-2 px-4 rounded-3xl">
+                <div className="flex-1 min-w-10 max-w-30 bg-white flex flex-col justify-between items-center p-4 rounded-xl bg-gradient-to-b from-white via-slate-200 to-white">
                   <div className="text-[#979797] text-left">UV Index</div>
                   <div className="flex flex-col justify-between h-full w-full p-2 items-center">
                     <span
